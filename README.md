@@ -20,6 +20,18 @@ Built with **Next.js**, **TypeScript**, and **Google’s Gemini model**, it prov
 - **Storage:** localStorage  
 
 ---
+### 📂 Main File  
+
+The project starts from **`src/app/page.tsx`**, which serves as the main entry point for the UI and core logic.  
+It handles:  
+- Document upload and client-side text extraction (`.pdf`, `.docx`, `.txt`, `.md`)  
+- Chat session management and message persistence (via `localStorage`)  
+- Communication with the AI model through the `getAIResponse` server action  
+- Rendering of the chat interface, sidebar, and file upload view  
+
+This file ties together all major components and defines the main workflow of **DocuChat**.
+
+---
 
 ## 🔄 How It Works  
 1. User uploads a document.  
