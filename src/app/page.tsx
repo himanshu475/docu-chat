@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { File, MessageSquare, Plus, Send, UploadCloud, Trash2, Download } from 'lucide-react';
+import { File, MessageSquare, Plus, Send, UploadCloud, Trash2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { getAIResponse } from './actions';
 import { ChatMessage } from '@/components/chat-message';
@@ -23,7 +23,6 @@ import {
   SidebarInset,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { downloadCode } from '@/lib/download-code';
 
 
 // Set up the worker source for pdf.js
@@ -328,16 +327,6 @@ export default function Home() {
               ))}
             </SidebarMenu>
             </div>
-            <SidebarFooter className='mt-auto p-2'>
-              <SidebarMenu>
-                <SidebarMenuItem>
-                  <SidebarMenuButton onClick={downloadCode}>
-                    <Download />
-                    Download Code
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              </SidebarMenu>
-            </SidebarFooter>
           </SidebarContent>
         </Sidebar>
         <SidebarInset>
